@@ -1,0 +1,102 @@
+<!-- Desktop navbar ---------------------------------------------------->
+<nav class="nav-desktop">
+    <ul class="bar-left">
+        <li>
+            <img src="../../images/Logo-Full.svg" alt="logo" class="logo-desktop">
+        </li>
+        <li>
+            <a href="../pages/main.html" data-key="navhome"></a>
+        </li>
+        <li>
+            <a href="../pages/aboutus.html" data-key="navabout"></a>
+        </li>
+        <li class="dropdown">
+            <button type="button" class="dropdown-toggle">
+                <p data-key="navservice"></p>
+                <img src="../../images/expand_more.svg" alt="more">
+            </button>
+            <div class="dropdown-content">
+                <a href="../pages/DiD.html">DiD</a>
+                <a href="../pages/Postbox.html">Digital Postbox</a>
+            </div>
+        </li>
+        <li>
+            <a href="../pages/news.html" data-key="navnews"></a>
+        </li>
+        <li>
+            <a href="../pages/contact.html" data-key="navcont"></a>
+        </li>
+    </ul>
+    <div class="bar-right">
+        <div>
+            <button class="lang-toggle">
+                <img src="../../images/Global.svg" alt="global" class="global-icon">
+                <span class="current-lang" data-key="lang"></span>
+                <img src="../../images/expand_more.svg" alt="ExpandMore">
+            </button>
+            <ul class="lang-dropdown">
+                <li onclick="setLang('th')">TH</li>
+                <li onclick="setLang('en')">EN</li>
+            </ul>
+        </div>
+
+        <img src="../../images/Ring Icon.svg" alt="noti" class="ring-icon">
+        <button type="button" class="btn-signin">
+            <a href="../pages/signin.html" data-key="signin"></a>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile / Tablet navbar ------------------------------------------->
+<nav class="nav-mobile">
+    <div class="bar-left">
+        <button id="menu-toggle"><img src="../../images/Menu.svg" alt="hamburger"></button>
+        <button class="lang-toggle">
+            <span class="current-lang" data-key="lang"></span>
+            <img src="../../images/expand_more.svg" alt="ExpandMore">
+        </button>
+        <ul class="lang-dropdown">
+            <li onclick="setLang('th')">TH</li>
+            <li onclick="setLang('en')">EN</li>
+        </ul>
+    </div>
+    <div class="bar-middle">
+        <img src="../../images/Logo-Full.svg" alt="logo" class="logo-mobile">
+    </div>
+    <div class="bar-right">
+        <button class="ring-icon"><img src="../../images/Ring Icon.svg" alt="noti"></button>
+        <button type="button" class="btn-signin">
+            <a href="../pages/signin.html" data-key="signin"></a>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile / Tablet menu sidebar ------------------------------------------->
+<div id="menu-side">
+    <button id="btn-close">&times;</button>
+    <ul class="bar-left">
+        <li>
+            <a href="../pages/main.html" data-key="navhome"></a>
+        </li>
+        <li>
+            <a href="../pages/aboutus.html" data-key="navabout"></a>
+        </li>
+        <li class="dropdown">
+            <!-- <a href="error.html">บริการของเรา</a>  -->
+            <button type="button" class="dropdown-toggle">
+                <p data-key="navservice"></p>
+                <img src="../../images/expand_more.svg" alt="more">
+            </button>
+            <div class="dropdown-content">
+                <a href="../pages/DiD.html">DiD</a>
+                <a href="../pages/Postbox.html">Digital Postbox</a>
+            </div>
+        </li>
+        <li>
+            <a href="../pages/news.html" data-key="navnews"></a>
+        </li>
+        <li>
+            <a href="../pages/contact.html" data-key="navcont"></a>
+        </li>
+    </ul>
+</div>

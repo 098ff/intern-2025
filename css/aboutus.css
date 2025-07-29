@@ -1,0 +1,348 @@
+@import url('./variables.css');
+@import url('./fonts.css');
+
+* {
+    /* CSS reset */
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sections */
+
+section {
+    padding: 60px 160px;
+}
+
+.Title-32 {
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.Title-28 {
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.Sub-Title-24 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.Paragraph {
+    font-weight: 500;
+    /* Medium */
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+}
+
+.Paragraph p {
+    text-align: start;
+}
+
+/* Section A */
+
+.section-A {
+    display: flex;
+    gap: 36px;
+    margin-top: 60px;
+}
+
+.Desc {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.img-A {
+    width: 400px;
+    height: 300px;
+}
+
+/* Section B & C */
+
+.section-B-C {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background-image: url(../images/Section_C_D.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-B {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-C {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 16px;
+
+    gap: 18px;
+    padding: 32px 20px;
+}
+
+.container-C {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Advanced Selector */
+.container-C>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding: 40px;
+}
+
+.hori-line-conC {
+    border-right: 1px solid var(--neutral-300);
+}
+
+/* Section D */
+
+.section-D {
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(0deg, white 0%, #ECF1F7 100%);
+
+    height: fit-content;
+
+    gap: 32px;
+}
+
+.head-D {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.head-text-D {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Section D -> Picture Blog */
+
+.blog-pic-D-desktop {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    /* grid with 2 rows : 1fr = 1 portion (same height) */
+    gap: 8px;
+    width: 100%;
+    max-width: 1120px;
+}
+
+.blog-pic-D-mobile {
+    display: none;
+    /* hidden by default */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.row-pic-D:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid with 2 columns : same height */
+    gap: 8px;
+}
+
+.row-pic-D:nth-child(2) {
+    /* 2nd child that uses class="row-pic-D" */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid with 3 coluns : same height */
+    gap: 8px;
+}
+
+.card-pic-D {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 1120/568;
+
+    padding: 8px;
+}
+
+.card-pic-D img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Text overlay at Picture */
+
+.pic-text {
+    position: absolute;
+    /* อิงกับ parent ที่เป็น img ซึ่ง absolute */
+    top: 30px;
+    left: 30px;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Section E */
+
+.section-E {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 152px;
+    padding-right: 152px;
+    gap: 8px;
+
+    background-image: url('../images/Bottom-BG.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-top: 1px solid var(--neutral-300);
+}
+
+.desc-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+
+    gap: 8px;
+    padding: 100px 60px;
+
+    border-radius: 16px;
+    border: 1px solid white;
+}
+
+.wrapper-big {
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--secondary-500);
+}
+
+.wrapper-small {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--neutral-500);
+    text-align: right;
+}
+
+/* ################################# */
+/* Responsive Design */
+/* ################################# */
+
+@media screen and (max-width: 768px) {
+
+    /* Sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    .section-A {
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+    }
+
+    .Desc {
+        width: 100%;
+    }
+
+    .img-A {
+        width: 100%;
+    }
+
+    .section-B-C {
+        padding: 40px 20px;
+        gap: 38px;
+    }
+
+    .container-C {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hori-line-conC {
+        border-right: none;
+        border-bottom: 1px solid var(--neutral-300);
+    }
+
+    .container-C>div {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .blog-pic-D-desktop {
+        display: none;
+    }
+
+    .blog-pic-D-mobile {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .card-pic-D {
+        min-width: 240px;
+        height: 200px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .section-E {
+        padding: 40px 40px;
+    }
+
+    .desc-container {
+        padding: 40px 60px;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .wrapper-big {
+        font-size: 32px;
+    }
+
+    .wrapper-small {
+        font-size: 16px;
+    }
+}

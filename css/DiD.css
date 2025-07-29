@@ -1,0 +1,530 @@
+@import url('./variables.css');
+@import url('./fonts.css');
+
+* {
+    /* CSS reset */
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Sections */
+
+.Title-28 {
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.Sub-Title-24 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.Blog-14 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.Blog-16 {
+    font-weight: 500;
+    /* Medium */
+    font-size: 18px;
+    line-height: 28px;
+}
+
+section {
+    padding: 60px 160px;
+}
+
+.section-A {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 30px;
+
+    align-items: center;
+    background: radial-gradient(circle,
+            rgba(196, 220, 255, 0.5) 7%,
+            rgba(255, 255, 255, 0) 100%);
+}
+
+.img-DiD {
+    width: 110px;
+    height: 115px;
+}
+
+.desc-A {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.desc-A h6 {
+    color: var(--neutral-800);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.desc-A h2 {
+    color: var(--secondary-500);
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.desc-A span {
+    color: var(--red-text);
+}
+
+.prob-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding: 24px 20px 30px 20px;
+    border-radius: 16px;
+    background-color: rgba(252, 253, 255, 0.8);
+}
+
+.prob-container h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--secondary-400);
+}
+
+.card-set {
+    display: flex;
+    gap: 20px;
+}
+
+.prob-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 30px;
+    align-items: center;
+    height: 250px;
+    width: 20%;
+    border-radius: 16px;
+    /* border: 1px red solid; */
+    background-color: white;
+}
+
+.prob-card p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--neutral-600);
+}
+
+.prob-card img {
+    width: 48px;
+    height: 48px;
+}
+
+.section-B {
+    display: flex;
+    gap: 40px;
+    padding: 55px 160px;
+    background: linear-gradient(90deg, #F8B8AF 0%, #BBD4E8 100%);
+    justify-items: center;
+    align-items: center;
+}
+
+#img-B-stack {
+    position: relative;
+    width: 60%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#phone-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    width: 400px;
+    height: auto;
+}
+
+#phone-png {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#img-B-stack:hover #phone-png {
+    transform: translate(-50%, -50%) scale(0.67);
+}
+
+#img-B-stack:hover .float-icons {
+    opacity: 1;
+}
+
+.icon-angle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 65px;
+    height: 65px;
+}
+
+#img-B-stack:hover .angle-1 {
+    transform: translateX(-150px) rotate(-140deg) translateY(380px) rotate(140deg);
+    opacity: 1;
+}
+
+#img-B-stack:hover .angle-2 {
+    transform: translateX(-640px) rotate(-100deg) translateY(812px) rotate(100deg);
+    opacity: 1;
+}
+
+#img-B-stack:hover .angle-3 {
+    transform: translateX(60px) rotate(140deg) translateY(390px) rotate(-140deg);
+    opacity: 1;
+}
+
+#img-B-stack:hover .angle-4 {
+    transform: translateX(190px) rotate(100deg) translateY(400px) rotate(-100deg);
+    opacity: 1;
+}
+
+.mission-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 32px 20px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mission-box h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--secondary-400);
+}
+
+.mission-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.card-mission {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    border-radius: 16px;
+    background-color: white;
+    width: 100%;
+}
+
+.card-mission img {
+    width: 48px;
+    height: 48px;
+}
+
+.card-mission p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--neutral-600);
+    text-align: center;
+}
+
+.section-C {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 160px 30px 160px;
+    background-color: var(--DiD-C-bg);
+}
+
+.section-C h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--secondary-500);
+    line-height: 48px;
+    max-width: 500px;
+}
+
+.section-C span {
+    color: var(--red-text);
+}
+
+#img-C-stack {
+    position: relative;
+    width: 40%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bg-phone {
+    position: absolute;
+    width: 480px;
+}
+
+#img-C-stack {
+    position: relative;
+}
+
+#phone-2 {
+    position: absolute;
+    top: 58%;
+    left: 36%;
+    height: 85%;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    z-index: 1;
+    transition: all 1.2s ease;
+    animation: phone-3-in 1.0s ease;
+}
+
+#phone-3 {
+    position: absolute;
+    top: 40%;
+    left: 68%;
+    height: 85%;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    z-index: 2;
+    transition: all 1.2s ease;
+    animation: phone-2-in 1.0s ease;
+}
+
+#img-C-stack:hover #phone-2 {
+    animation: phone-2-out 1.0s ease;
+    z-index: 2;
+    transition: all 1.5s ease;
+    height: 115%;
+    top: 45%;
+    left: 30%;
+}
+
+#img-C-stack:hover #phone-3 {
+    animation: phone-3-out 1.0s ease;
+    z-index: 1;
+    transition: all 1.5s ease;
+    height: 70%;
+    top: 50%;
+}
+
+/* ################################# */
+/* Keyframe Animation */
+/* ################################# */
+
+@keyframes phone-2-in {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-30%, -50%) scale(0.5) rotate(-30deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes phone-3-in {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-30%, -50%) scale(0.5) rotate(30deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes phone-2-out {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-30%, -50%) scale(0.5) rotate(30deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes phone-3-out {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-30%, -50%) scale(0.5) rotate(-30deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+/* ################################# */
+/* Responsive Design */
+/* ################################# */
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 40px 20px;
+    }
+
+    .section-A {
+        margin-top: 65px;
+    }
+
+    .desc-A {
+        gap: 10px;
+    }
+
+    .desc-A h2 {
+        text-align: center;
+    }
+
+    .prob-container {
+        width: 90%;
+    }
+
+    .card-set {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prob-card {
+        width: 70%;
+        height: 220px;
+    }
+
+    .section-B {
+        flex-direction: column;
+    }
+
+    #img-B-stack {
+        height: 300px;
+        width: 40%;
+    }
+
+    #phone-circle {
+        width: 300px;
+    }
+
+    #phone-png {
+        width: 400px;
+    }
+
+    #img-B-stack:hover #phone-png {
+        transform: translate(-50%, -50%) scale(0.67);
+    }
+
+    #img-B-stack:hover .float-icons {
+        opacity: 1;
+    }
+
+    .icon-angle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #img-B-stack:hover .angle-1 {
+        transform: translateX(-130px) rotate(-140deg) translateY(290px) rotate(140deg);
+    }
+
+    #img-B-stack:hover .angle-2 {
+        transform: translateX(-580px) rotate(-97deg) translateY(700px) rotate(100deg);
+    }
+
+    #img-B-stack:hover .angle-3 {
+        transform: translateX(60px) rotate(140deg) translateY(310px) rotate(-140deg);
+    }
+
+    #img-B-stack:hover .angle-4 {
+        transform: translateX(190px) rotate(100deg) translateY(350px) rotate(-100deg);
+    }
+
+    .section-B {
+        padding: 40px;
+    }
+
+    .section-C {
+        flex-direction: column;
+        padding: 20px 20px 40px 20px;
+        gap: 10px;
+    }
+
+    .section-C h2 {
+        max-width: none;
+        padding: 0px 20px;
+    }
+
+    #img-C-stack {
+        height: 400px;
+    }
+
+    #bg-phone {
+        width: 350px;
+    }
+
+    #phone-2 {
+        top: 55%;
+        left: 35%;
+        height: 65%;
+    }
+
+    #phone-3 {
+        top: 45%;
+        left: 80%;
+        height: 65%;
+    }
+
+    #img-C-stack:hover #phone-2 {
+        height: 90%;
+        top: 40%;
+        left: 30%;
+    }
+
+    #img-C-stack:hover #phone-3 {
+        height: 55%;
+        top: 45%;
+        left: 85%;
+    }
+}

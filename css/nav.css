@@ -1,0 +1,337 @@
+@import url('./variables.css');
+@import url('./fonts.css');
+
+* {
+    /* CSS reset */
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Dropdown */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* สำหรับไฮไลท์ขีดเส้นใต้ที่ current page */
+.bar-left li>a.current {
+    color: var(--secondary-500);
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-500);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 8px var(--neutral-300);
+    z-index: 3;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--hover-bg);
+    color: var(--secondary-500);
+}
+
+.dropdown.current .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a.current {
+    color: var(--secondary-500);
+    font-weight: 600;
+}
+
+.dropdown.current button>p {
+    color: var(--secondary-500);
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary-500);
+}
+
+.dropdown:hover button p {
+    cursor: pointer;
+    color: var(--secondary-500);
+}
+
+.dropdown:hover button img {
+    filter: invert(39%) sepia(57%) saturate(322%) hue-rotate(181deg) brightness(97%) contrast(94%);
+}
+
+/* Navigation */
+
+.nav-desktop {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    z-index: 999;
+
+    padding: 16px 160px;
+
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.bar-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.bar-left li>a,
+li button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--nav-text);
+}
+
+.logo-desktop {
+    width: 99px;
+    height: 32px;
+}
+
+.bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    position: relative;
+}
+
+.bar-right div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.global-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.lang-dropdown {
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px 0px;
+    top: 80%;
+    margin-left: 28px;
+    box-shadow: 0 4px 8px var(--neutral-300);
+
+    display: none;
+}
+
+.lang-dropdown li {
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.lang-dropdown li:hover {
+    background: var(--hover-bg);
+    color: var(--secondary-500);
+}
+
+.ring-icon {
+    width: 28px;
+    height: 28px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-side {
+    display: none;
+}
+
+.btn-signin {
+    padding: 6.4px 15px 6.4px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: var(--secondary-500) solid 3px;
+    background-color: var(--secondary-500);
+}
+
+.btn-signin a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* Hover ไม่ทำงานในหน้าจอ Phone / Tablet เพราะไม่มี event นี้ใน Device Size นั้น */
+.btn-signin:hover {
+    background-color: white;
+    border: var(--secondary-500) solid 3px;
+}
+
+.btn-signin a:hover {
+    color: var(--secondary-500);
+}
+
+/* ################################# */
+/* Responsive Design */
+/* ################################# */
+
+@media screen and (max-width: 768px) {
+    /* Navigation Bar */
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        justify-content: space-between;
+
+        padding: 16px 20px;
+
+        background-color: white;
+        width: 100%;
+        border-bottom: 1px solid var(--nav-border);
+    }
+
+    .bar-middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    #menu-side {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        /* height เต็มหน้าจอ */
+        width: fit-content;
+        background-color: white;
+        transform: translateX(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 3;
+        padding: 12px 20px;
+        gap: 20px;
+        box-shadow: 2px 0 10px var(--neutral-300);
+    }
+
+    #menu-side ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    #menu-side a {
+        text-decoration: none;
+        color: var(--nav-text);
+        font-weight: 500;
+    }
+
+    #menu-side a.current {
+        color: var(--secondary-500);
+        font-weight: 600;
+    }
+
+    #menu-side li>a.current {
+        border-bottom: 2px solid var(--secondary-500);
+    }
+
+    /* Show menu */
+    #menu-side.show {
+        transform: translateX(0);
+    }
+
+    #menu-side .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 10px;
+        border-radius: 0px;
+    }
+
+    #menu-side .dropdown-content a {
+        padding: 8px 8px;
+        width: fit-content;
+    }
+
+    #btn-close {
+        font-size: 24px;
+        color: var(--neutral-500);
+        background: none;
+        border: none;
+        float: right;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+    }
+
+    .logo-mobile {
+        width: 80px;
+        height: 26px;
+    }
+
+    .bar-left {
+        gap: 20px;
+    }
+
+    .lang-dropdown {
+        margin-left: 50px;
+    }
+}

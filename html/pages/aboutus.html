@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/fonts.css" />
+    <link rel="stylesheet" href="../../css/aboutus.css" />
+    <link rel="stylesheet" href="../../css/nav.css"/>
+    <link rel="stylesheet" href="../../css/footer.css"/>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div data-include="../components/nav.html"></div>
+    <!-- Introduction Part -->
+    <section class="section-A">
+        <div class="Desc">
+            <div>
+                <h2 class="Title-32" style="color: var(--secondary-500);" data-key="Adesc"></h2>
+            </div>
+            <!-- ต้องมี div มาครอบ p หรือ head เพื่อบางทีดึงข้อมูลจากที่อื่นมาแสดง จะได้อ้างอิงมาใส่ถูก -->
+            <div class="Paragraph">
+                <p data-key="Apara"></p>
+            </div>
+        </div>
+        <div class="img-A">
+            <img src="../../images/img-A.svg" alt="ThaiPost" class="img-A">
+        </div>
+    </section>
+
+    <!-- Vision Part -->
+    <section class="section-B-C">
+        <!-- วิสัยทัศน์ -->
+        <div class="section-B">
+            <div>
+                <img src="../../images/view.png" alt="view">
+            </div>
+            <div style="color: var(--secondary-500)">
+                <h4 class="Sub-Title-24" data-key="Btopic"></h4>
+            </div>
+            <div>
+                <h2 class="Title-32" data-key="Btitle"></h2>
+            </div>
+            <div>
+                <p class="Paragraph" data-key="Bpara"></p>
+            </div>
+        </div>
+        <!-- พันธกิจ -->
+        <div class="section-C">
+            <div>
+                <h3 class="Title-28" style="color: var(--secondary-500);" data-key="Ctopic"></h3>
+            </div>
+            <div class="container-C">
+                <div class="hori-line-conC">
+                    <div>
+                        <img src="../../images/Enhance.svg" alt="enhance">
+                    </div>
+                    <div>
+                        <p class="Paragraph" style="line-height: 24px" data-key="Cpara1"></p>
+                    </div>
+                </div>
+
+                <div class="hori-line-conC">
+                    <div>
+                        <img src="../../images/Digital.svg" alt="digital">
+                    </div>
+                    <div>
+                        <p class="Paragraph" style="line-height: 24px" data-key="Cpara2"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="../../images/DigiStructure.svg" alt="digistructure">
+                    </div>
+                    <div>
+                        <p class="Paragraph" style="line-height: 24px" data-key="Cpara3"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Heart of Services Part -->
+    <section class="section-D">
+        <div class="head-D">
+            <div>
+                <img src="../../images/heart.svg" alt="heart">
+            </div>
+            <div class="head-text-D">
+                <div>
+                    <h4 class="Sub-Title-24" style="color: var(--secondary-500)" data-key="Dhead"></h4>
+                </div>
+                <div>
+                    <h2 class="Title-32" style="color: var(--secondary-400);">
+                        <span style="color: var(--red-text);">5 Live</span> Propositions
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- ใช้ flex (default of flex is ROW) -->
+        <div class="blog-pic-D-desktop">
+            <div class="row-pic-D">
+                <div class="card-pic-D">
+                    <img src="../../images/Card1.svg" alt="balloon">
+                    <span class="pic-text">Live Faster</span>
+                </div>
+                <div class="card-pic-D">
+                    <img src="../../images/Card2.svg" alt="car">
+                    <span class="pic-text">Live Smarter</span>
+                </div>
+            </div>
+            <div class="row-pic-D">
+                <div class="card-pic-D">
+                    <img src="../../images/Card3.svg" alt="plums">
+                    <span class="pic-text">Live Safer</span>
+                </div>
+                <div class="card-pic-D">
+                    <img src="../../images/Card4.svg" alt="forest">
+                    <span class="pic-text">Live Greener</span>
+                </div>
+                <div class="card-pic-D">
+                    <img src="../../images/Card5.svg" alt="house">
+                    <span class="pic-text">Live Happier</span>
+                </div>
+            </div>
+        </div>
+        <div class="blog-pic-D-mobile">
+            <div class="card-pic-D">
+                <img src="../../images/Card1.svg" alt="live faster">
+                <span class="pic-text">Live Faster</span>
+            </div>
+            <div class="card-pic-D">
+                <img src="../../images/Card2.svg" alt="live smarter">
+                <span class="pic-text">Live Smarter</span>
+            </div>
+            <div class="card-pic-D">
+                <img src="../../images/Card3.svg" alt="live safer">
+                <span class="pic-text">Live Safer</span>
+            </div>
+            <div class="card-pic-D">
+                <img src="../../images/Card4.svg" alt="live greener">
+                <span class="pic-text">Live Greener</span>
+            </div>
+            <div class="card-pic-D">
+                <img src="../../images/Card5.svg" alt="live happier">
+                <span class="pic-text">Live Happier</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Part -->
+    <section class="section-E">
+        <div class="desc-container">
+            <div>
+                <!-- Scale up Text Size -->
+                <h1 class="wrapper-big">Prompt Post - Document<br>Less, Live More</h1>
+            </div>
+            <div>
+                <h3 class="wrapper-small" data-key="Edesc">ชีวิตที่ง่ายขึ้น ด้วยเทคโนโลยีที่ออกแบบมาเพื่อทุกคน</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Part -->
+    <div data-include="../components/footer.html"></div>
+    <!-- JavaScript -->
+    <script type="module" src="../../javascript/handler.js"></script>
+</body>
+
+</html>
