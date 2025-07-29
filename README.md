@@ -1,6 +1,6 @@
 # PromptPost Website (Frontend Internship Project)
 
-This project is part of my internship during June–July 2025. It is a frontend web project built with HTML, CSS, and JavaScript (no framework) focusing on layout design, responsive behavior, animation, and transition effects.
+This project is part of my internship at Turnkey Communication Services (TKC) during June–July 2025. It is a frontend web project built with HTML, CSS, and JavaScript (no framework) focusing on layout design, responsive behavior, animation, and transition effects.
 
 ## 🔍 Project Scope
 
